@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratus</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app-container">
+
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Search city...">
+            <button id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+
+        <div class="layout">
+
+            <div class="summary stat-card" id="summary">
+                <div class="stat-header">
+                    <i class="fa-solid fa-map-pin"></i>
+                    <h3 id="city-country">Johannesburg, ZA</h3>
+                </div>
+                <h1 id="temp">19°</h1>
+                <p id="weather-condition">Partly Cloudy</p>
+                <div id="temp-max-min">
+                    <p id="temp-high">H: 23°</p>
+                    <p id="temp-low">L: 11°</p>
+                </div>
+            </div>
+
+            <div class="humidity stat-card" id="humidity">
+                <div class="stat-header">
+                    <i class="fa-solid fa-droplet"></i>
+                    <h3>HUMIDITY</h3>
+                </div>
+                <h1 id="humid-percent">54%</h1>
+                <p id="humid-text">Moderate</p>
+            </div>
+
+            <div class="wind stat-card" id="wind">
+                <div class="stat-header">
+                    <i class="fa-solid fa-wind"></i>
+                    <h3>WIND</h3>
+                </div>
+                <h1 id="wind-speed"><span class="wind-spd">18</span>km/h</h1>
+                <p id="wind-direction">NE direction</p>
+            </div>
+
+            <div class="feels-like stat-card" id="feels-like">
+                <div class="stat-header">
+                    <i class="fa-solid fa-person"></i>
+                    <h3>FEELS LIKE</h3>
+                </div>
+                <h1 id="fl-temp">17°</h1>
+                <p id="fl-text">Slightly Cooler</p>
+            </div>
+
+            <div class="uv-index stat-card" id="uv-index">
+                <div class="stat-header">
+                    <i class="fa-regular fa-sun"></i>
+                    <h3>UV INDEX</h3>
+                </div>
+                <h1 id="uv-status">5</h1>
+                <p id="uv-text">Moderate, use SPF</p>
+            </div>
+
+            <div class="hourly-forecast stat-card" id="hourly-forecast">
+                <div class="stat-header">
+                    <i class="fa-regular fa-clock"></i>
+                    <h3>HOURLY FORECAST</h3>
+                </div>
+                <div class="hourly-strip">
+                    <div class="hour-card">
+                        <span class="hour-time">Now</span>
+                        <span class="hour-icon">⛅</span>
+                        <span class="hour-temp">19°</span>
+                    </div>
+                    <div class="hour-card">
+                        <span class="hour-time">2pm</span>
+                        <span class="hour-icon">☀️</span>
+                        <span class="hour-temp">22°</span>
+                    </div>
+                    <div class="hour-card">
+                        <span class="hour-time">4pm</span>
+                        <span class="hour-icon">☀️</span>
+                        <span class="hour-temp">23°</span>
+                    </div>
+                    <div class="hour-card">
+                        <span class="hour-time">6pm</span>
+                        <span class="hour-icon">🌤</span>
+                        <span class="hour-temp">20°</span>
+                    </div>
+                    <div class="hour-card">
+                        <span class="hour-time">8pm</span>
+                        <span class="hour-icon">🌙</span>
+                        <span class="hour-temp">16°</span>
+                    </div>
+                    <div class="hour-card">
+                        <span class="hour-time">10pm</span>
+                        <span class="hour-icon">🌙</span>
+                        <span class="hour-temp">13°</span>
+                    </div>
+                    <div class="hour-card">
+                        <span class="hour-time">12am</span>
+                        <span class="hour-icon">🌙</span>
+                        <span class="hour-temp">11°</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="five-day-forecast stat-card" id="five-day-forecast">
+                <div class="stat-header">
+                    <i class="fa-regular fa-calendar"></i>
+                    <h3>5-DAY FORECAST</h3>
+                </div>
+                <ul class="forecast-list">
+                    <li class="forecast-row">
+                        <span class="forecast-day">Today</span>
+                        <span class="forecast-icon">⛅</span>
+                        <div class="forecast-bar-wrap">
+                            <div class="forecast-bar"></div>
+                        </div>
+                        <div class="forecast-range">
+                            <span class="forecast-low">11°</span>
+                            <span class="forecast-high">23°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span class="forecast-day">Tuesday</span>
+                        <span class="forecast-icon">☀️</span>
+                        <div class="forecast-bar-wrap">
+                            <div class="forecast-bar"></div>
+                        </div>
+                        <div class="forecast-range">
+                            <span class="forecast-low">13°</span>
+                            <span class="forecast-high">26°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span class="forecast-day">Wednesday</span>
+                        <span class="forecast-icon">🌧</span>
+                        <div class="forecast-bar-wrap">
+                            <div class="forecast-bar"></div>
+                        </div>
+                        <div class="forecast-range">
+                            <span class="forecast-low">10°</span>
+                            <span class="forecast-high">18°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span class="forecast-day">Thursday</span>
+                        <span class="forecast-icon">🌦</span>
+                        <div class="forecast-bar-wrap">
+                            <div class="forecast-bar"></div>
+                        </div>
+                        <div class="forecast-range">
+                            <span class="forecast-low">11°</span>
+                            <span class="forecast-high">20°</span>
+                        </div>
+                    </li>
+                    <li class="forecast-row">
+                        <span class="forecast-day">Friday</span>
+                        <span class="forecast-icon">☀️</span>
+                        <div class="forecast-bar-wrap">
+                            <div class="forecast-bar"></div>
+                        </div>
+                        <div class="forecast-range">
+                            <span class="forecast-low">14°</span>
+                            <span class="forecast-high">25°</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
